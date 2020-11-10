@@ -44,5 +44,5 @@ nvm use latest
 This only needs to be ran once and it's added permanently.
 
 ```sh
-set -U fish_user_paths /usr/local/bin $fish_user_paths
+set -Ua fish_user_paths /home/juris/.composer/vendor/bin
 ```
