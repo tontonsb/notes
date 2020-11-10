@@ -38,3 +38,11 @@ Install [nvm.fish](https://github.com/jorgebucaran/nvm.fish) and get node & npm:
 fisher add jorgebucaran/nvm.fish
 nvm use latest
 ```
+
+## Add to PATH
+
+This only needs to be ran once and it's added permanently.
+
+```sh
+set -U fish_user_paths /usr/local/bin $fish_user_paths
+```
