@@ -136,6 +136,7 @@ endif
 
 Plug 'itchyny/lightline.vim' " Nice status line
 Plug 'morhetz/gruvbox' " Color scheme
+Plug 'chr4/nginx.vim' " Nginx syntax highlighting
 
 call plug#end()
 
