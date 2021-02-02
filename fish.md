@@ -35,8 +35,8 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 Install [nvm.fish](https://github.com/jorgebucaran/nvm.fish) and get node & npm:
 
 ```sh
-fisher add jorgebucaran/nvm.fish
-nvm use latest
+fisher install jorgebucaran/nvm.fish
+nvm install latest
 ```
 
 ## Add to PATH
