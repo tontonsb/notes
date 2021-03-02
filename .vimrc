@@ -1,6 +1,5 @@
-Some config for the `~/.vimrc` file. Mostly stolen from the internets. Lines starting with `" ` are comments.
+" Some config for the `~/.vimrc` file. Mostly stolen from the internets. Lines starting with `" ` are comments.
 
-```
 " use vim mode instead of Vi
 set nocompatible
 
@@ -31,6 +30,7 @@ set fileformats=unix "
 
 " Better command-line completion
 set wildmenu
+set wildmode=longest:list,full
 
 " Show partial commands in the last line of the screen
 set showcmd
@@ -144,7 +144,6 @@ call plug#end()
 "------------------------------------------------------------
 " Visuals {{{1
 "
-" Basic plugins
 
 set background=dark
 
@@ -154,4 +153,3 @@ set t_Co=256
 " It will crash on first run because scheme is not installed yet
 " But it will work anyways.
 colorscheme gruvbox
-```
