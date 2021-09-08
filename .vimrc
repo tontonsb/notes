@@ -22,7 +22,9 @@ set scrolloff=2 " always show 2 lines above/below
 set confirm " confirm :q in case of unsaved changes
 set fileencoding=utf-8 " encoding used when saving file
 set nobackup " do not keep the backup~ file
-set fileformats=unix " 
+set fileformats=unix "
+set undofile " save info for undos
+
 
 "------------------------------------------------------------
 " Must have options {{{1
@@ -120,31 +122,17 @@ cmap w!! w !sudo tee > /dev/null %
 "------------------------------------------------------------
 " Storages {{{1
 
-" Prepare parent
-if !isdirectory("~/.vim")
-    call mkdir("~/.vim", "", 0770)
-endif
-
 " Set storage for undo files
-if !isdirectory("~/.vim/undos")
-    call mkdir("~/.vim/undos", "", 0700)
-endif
-set undodir=~/.vim/undo-dir//
+let &undodir = expand('~/.vim/undos//')
+if !isdirectory(&undodir) | call mkdir(&undodir, 'p') | endif
 
 " Set storage for backup files
-if !isdirectory("~/.vim/backup-dir")
-    call mkdir("~/.vim/backup-dir", "", 0700)
-endif
-set backupdir^=~/.vim/swaps//
+let &backupdir = expand('~/.vim/backups//')
+if !isdirectory(&backupdir) | call mkdir(&backupdir, 'p') | endif
 
 " Set storage for swap files
-if !isdirectory("~/.vim/swaps")
-    call mkdir("~/.vim/swaps", "", 0700)
-endif
-set directory^=~/.vim/swaps//
-
-" Enable undos
-set undofile
+let &directory = expand('~/.vim/swaps//')
+if !isdirectory(&directory) | call mkdir(&directory, 'p') | endif
 
 
 "------------------------------------------------------------
