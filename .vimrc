@@ -118,6 +118,36 @@ cmap w!! w !sudo tee > /dev/null %
 
 
 "------------------------------------------------------------
+" Storages {{{1
+
+" Prepare parent
+if !isdirectory("~/.vim")
+    call mkdir("~/.vim", "", 0770)
+endif
+
+" Set storage for undo files
+if !isdirectory("~/.vim/undos")
+    call mkdir("~/.vim/undos", "", 0700)
+endif
+set undodir=~/.vim/undo-dir//
+
+" Set storage for backup files
+if !isdirectory("~/.vim/backup-dir")
+    call mkdir("~/.vim/backup-dir", "", 0700)
+endif
+set backupdir^=~/.vim/swaps//
+
+" Set storage for swap files
+if !isdirectory("~/.vim/swaps")
+    call mkdir("~/.vim/swaps", "", 0700)
+endif
+set directory^=~/.vim/swaps//
+
+" Enable undos
+set undofile
+
+
+"------------------------------------------------------------
 " Plugins {{{1
 
 " Install Vim-Plug if not present
