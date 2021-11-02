@@ -157,6 +157,9 @@ Plug 'morhetz/gruvbox' " Color scheme
 Plug 'chr4/nginx.vim' " Nginx syntax highlighting
 Plug 'ntpeters/vim-better-whitespace' " Whitespace highlight and stripping
 Plug 'editorconfig/editorconfig-vim' " Editorconfig
+Plug 'wellle/targets.vim' " Overrides i', a{ etc. Provides iq etc.
+Plug 'tpope/vim-surround' " Selects surround objects with s
+Plug 'tpope/vim-repeat' " Makes vim-surround repeatable
 
 call plug#end()
 
