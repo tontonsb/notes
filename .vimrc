@@ -77,6 +77,12 @@ set t_vb=
 
 " Enable use of the mouse for all modes
 set mouse=a
+" Fix mouse support for WSL -- https://superuser.com/a/1017587/474426
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
 
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
