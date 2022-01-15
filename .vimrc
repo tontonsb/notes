@@ -159,6 +159,7 @@ if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
 endif
 
 Plug 'itchyny/lightline.vim' " Nice status line
+Plug 'jwalton512/vim-blade' " Laravel Blade highlighting
 Plug 'morhetz/gruvbox' " Color scheme
 Plug 'chr4/nginx.vim' " Nginx syntax highlighting
 Plug 'ntpeters/vim-better-whitespace' " Whitespace highlight and stripping
