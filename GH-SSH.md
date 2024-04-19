@@ -5,7 +5,7 @@ ssh-keygen -t ed25519 -C "juris@glaive.pro"
 # specify a key file name, e.g. ~/.ssh/myproject-github
 
 # If using fish:
-# fisher add danhper/fish-ssh-agent
+# fisher install danhper/fish-ssh-agent
 
 # If ssh agent is not on
 # eval $(ssh-agent)
